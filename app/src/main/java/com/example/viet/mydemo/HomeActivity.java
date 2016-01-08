@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class HomeActivity extends AppCompatActivity {
     private Button buttonCommencer;
@@ -39,7 +40,13 @@ public class HomeActivity extends AppCompatActivity {
         buttonCommencer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startMainActivity();
+                if (prenom.getText().length() != 0 && nombreQuestion.getText().length() != 0) {
+                    startMainActivity();
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "Entrez votre prenom et nombre de question vous souhaitez !!!",
+                            Toast.LENGTH_LONG).show();
+                }
             }
         });
 
