@@ -24,7 +24,7 @@ public class ResultatFragment extends Fragment {
         String prenom = getArguments().getString(TAG_PRENOM);
         final View view = inflater.inflate(R.layout.fragment_resultat, container, false);
         res = (TextView) view.findViewById(R.id.numResultat);
-        res.setText( prenom+" !!!, Vous avez " +String.valueOf(BonResponse) + " sur " + nombre + " exactement reponses !!!");
+        res.setText( prenom+" !!!, Vous avez " +String.valueOf(BonResponse) + " sur " + nombre + " reponses corrects !!!");
         finish = (Button) view.findViewById(R.id.finish);
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
